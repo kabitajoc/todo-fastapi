@@ -24,6 +24,29 @@ A FastAPI-based To-Do List application with in-memory storage, following 12-Fact
 - Docker 20.10+
 - Git
 
+## Project Structure 🗂
+
+todo-fastapi/
+├── .github/ # GitHub Actions workflows
+├── app/ # Main application package
+│ ├── core/ # Routing and core app logic
+│ │ └── routes/
+│ │ └── todos.py # Todo API routes
+│ ├── schemas/ # Pydantic models
+│ │ └── todo.py
+│ └── **init**.py
+├── docker/
+│ └── Dockerfile # Docker configuration
+├── env/ # Virtual environment
+├── tests/ # Test suite
+│ └── test_main.py
+├── .gitignore
+├── docker-compose.yml
+├── pre-commit-config.yaml
+├── pyproject.toml # Project config
+├── README.md
+└── requirements.txt
+
 ## Local Installation 💻
 
 1. **Clone the repository**
@@ -31,3 +54,11 @@ A FastAPI-based To-Do List application with in-memory storage, following 12-Fact
    git clone https://github.com/kabitajoc/todo-fastapi.git
    cd todo-fastapi
    ```
+
+## Running the API 🚀
+
+### With Uvicorn (Locally)
+
+```bash
+uvicorn app.main:app --reload
+```
