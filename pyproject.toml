@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=65.5.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "todo-fastapi"
+version = "0.1.0"
+description = "To-Do List API with FastAPI"
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.setuptools.package-dir]
+app = "app"
