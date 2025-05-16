@@ -27,4 +27,4 @@ jobs:
         run: pytest
 
       - name: 🐳 Build Docker image
-        run: docker build -t todo-fastapi .
+        run: docker build -t todo-fastapi -f docker/Dockerfile .
